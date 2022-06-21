@@ -1,111 +1,49 @@
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IEDC SNGCE</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-<link rel="icon" href="https://media-exp1.licdn.com/dms/image/C4D03AQGu-nVj0EvpnQ/profile-displayphoto-shrink_400_400/0/1634655226997?e=1642636800&v=beta&t=4hwMLVI_qdSXotJ_PTjWGLADzEjVnaR4ELvJoHh5vJo" type="image/icon type">
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-<style>
-    body{
-    background-color : #e8eef1;
-    background-size: cover;
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEDC SNGCE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"
+        href="https://media-exp1.licdn.com/dms/image/C4D03AQGu-nVj0EvpnQ/profile-displayphoto-shrink_400_400/0/1634655226997?e=1642636800&v=beta&t=4hwMLVI_qdSXotJ_PTjWGLADzEjVnaR4ELvJoHh5vJo"
+        type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            background-color: #e8eef1;
+            background-size: cover;
+        }
 
-}
-.hi-slide{
-    position: relative;
-    width: 754px;
-    height: 292px;
-    border-radius: 50px;
-    margin: 115px auto 0;
+        .hi-slide {
+            position: relative;
+            width: 754px;
+            height: 292px;
+            border-radius: 50px;
+            margin: 115px auto 0;
 
 
-}
-.hi-slide .hi-next,
-.hi-slide .hi-prev{
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    border-radius: 50px;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    transition: all 0.7s;
-    font-size: 20px;
-    font-weight: bold;
+        }
 
+        .slide {
+            background: center/contain no-repeat;
+        }
+    </style>
 
-}
-.hi-slide .hi-next:hover,
-.hi-slide .hi-prev:hover{
-    opacity: 1;
-    background-color: white;
-}
-.hi-slide .hi-prev{left: 59px;}
-.hi-slide .hi-prev::before{
-    content: '<';
-}
-.hi-slide .hi-next{
-    right: -59px;
-}
-.hi-slide .hi-next::before{
-    content:'>' ;
-}
-.hi-slide > ul{
-    list-style: none;
-    position: relative;
-    width: 754px;
-    height: 292px;
-    margin: 0;
-    padding: 0;
-
-
-
-}
-.hi-slide > ul > li{
-    overflow: hidden;
-    position:absolute ;
-    z-index: 0;
-    left: 377px;
-    top: 147px;
-    width: 0;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 3px solid white;
-    cursor: pointer;
-    background-color:#333;
-}
-.hi-slide > ul > li > img{
-    width: 100%;
-    height: 1000%;
-    background-position:center;
-
-}
-    
-
-
-
-    
-</style>
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/themes/splide-default.min.css">
 </head>
+
 <body>
     <section class="sub-header">
         <nav>
             <div class="animate__animated animate__heartBeat animate__infinite	infinite">
-                <a href="index.html"><img src="images/logo1.jpg" alt="Avatar of SNGCE IEDC BOOTCAMP" ></a>
-                </div>
-            <div class="nav-links" id="navLinks">  
+                <a href="index.html"><img src="images/logo1.jpg" alt="Avatar of SNGCE IEDC BOOTCAMP"></a>
+            </div>
+            <div class="nav-links" id="navLinks">
                 <i class="fa fa-close" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -117,59 +55,63 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-            <h1>EVENTS</h1>
+        <h1>EVENTS</h1>
     </section>
 
-    <div class="slide hi-slide">
-        <div class="hi-prev"></div>
-        <div class="hi-next"></div>
-        <ul>
-            <li><img src="images/event1.jpg"></li>
-            <li><img src="images/event2.jpg"></li>
-            <li><img src="images/event3.jpg"></li>
-            
-            
-        </ul>
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="hislide/jquery.hislide.js"></script>
+    <section class="splide hi-slide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide slide" style="background: url(images/1iedc.jpeg) center">
+                </li>
+                <li class="splide__slide slide" style="background: url(images/2iedc.jpeg) center">
+                </li>
+                <li class="splide__slide slide" style="background: url(images/3iedc.jpeg) center">
+                </li>
+            </ul>
+        </div>
+    </section>
     <script>
-        $('.slide').hiSlide();
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide');
+            splide.mount();
+        });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
-    
-    
 
-    
-<!-------- footer ---------->
 
-<section class="footer">
+
+
+    <!-------- footer ---------->
+
+    <section class="footer">
         <h4>About Us</h4>
-        <p>"The Innovation and Entrepreneurship Development Cell (IEDC) is an active student-run cell that works closely with kerala start up mission and other student clubs."</p>
-         <div class="icons">
+        <p>"The Innovation and Entrepreneurship Development Cell (IEDC) is an active student-run cell that works closely
+            with kerala start up mission and other student clubs."</p>
+        <div class="icons">
             <a href="https://www.facebook.com/iedc.sngce/"><i class="fa fa-facebook"></i></a>
             <a href="https://youtube.com/channel/UCDizRVRxQ5o14BFZInimp6A"><i class="fa fa-youtube"></i></a>
             <a href="https://instagram.com/iedc_sngce?utm_medium=copy_link"><i class="fa fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/iedc-sngce-259753223"><i class="fa fa-linkedin"></i></a>
-            
-         <br> <small>&copy; Copyright 2021, Geever & Justin, All rights reserved </small> 
+
+            <br> <small>&copy; Copyright 2021, Geever & Justin, All rights reserved </small>
 
         </div>
-     
-  
-<!----JavaScript for toggle menu---->
-<script>
-    var navLinks = document.getElementById("navLinks");
 
-    function showMenu() {
-        navLinks.style.right = "0";
-    }
 
-    function hideMenu() {
-        navLinks.style.right = "-200px";
-    }
-</script>  
-    
+        <!----JavaScript for toggle menu---->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
 </body>
-</html>    
+
+</html>
